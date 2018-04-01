@@ -1,0 +1,123 @@
+/*工具类样式*/
+body{
+	font: 14px Arial;
+}
+/*浮动*/
+.tl{
+	float: left;
+}
+.tr{
+	float: right;
+}
+/*清除浮动*/
+.clearfix{
+	*zoom: 1;
+}
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/*固定宽、居中*/
+.wrap{
+	width: 1130px;
+	margin: 0 auto;
+}
+@media only all and (max-width: 1130px) {
+	.wrap{
+		width: 93%;
+	}
+	body .i_main .im_left{
+		width: 100%;
+	}
+	body .i_main .im_right{
+		display: none;
+	}
+	body .i_main .image_list{
+		margin-bottom: 10px;
+	}
+}
+@media only all and (min-width:768px ) and (max-width: 1130px){
+	body .i_main .image_item:nth-of-type(1){
+		width: 50%;
+		height: 49%;
+	}
+	body .i_main .image_item:nth-of-type(n+2){
+		width: 23.3%;
+		height: 24%;
+		margin-bottom: 1%;
+		margin-left: 0.9%;
+	}
+}
+@media only all and (max-width: 767px) {
+	body .g_head{
+		width: 100%;
+		height: 45px;
+		position: absolute;
+		top: 0;
+		border-bottom: 1px solid #f2f2f2;
+		box-shadow: 0 1px 4px #f9f9f9;
+	}
+	body .g_head >a{
+		display: block;
+	}
+	.geekpark{
+		float: none;
+		width: 139px;
+		margin: 0 auto;
+	}
+	body .g_head .geekpark a{
+		margin-top: 11px;
+	}
+	.g_head .gh_right{
+		display: none;
+	}
+	.i_nav{
+		display: none;
+	}
+	body .i_main{
+		padding-top: 80px;
+	}
+	body .i_main{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 80px 20px 0;
+		margin: 0;
+	}
+	body .i_main .image_list{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		
+	}
+	body .i_main .image_list::after{
+		display: none;
+	}
+	body .i_main .image_item:nth-of-type(1){
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+	body .i_main .image_item:nth-of-type(1) a{
+		width: 100%;
+		height: 100%;
+	}
+	body .i_main .image_item:nth-of-type(1) img{
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
+	body .i_main .image_item:nth-of-type(n+2){
+		width: 49%;
+		margin-left: 0;
+	}
+	body .i_main .item_text p{
+		display: none;
+	}
+	.g_foot{
+		display: none;
+	}
+}
